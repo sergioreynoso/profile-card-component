@@ -1,0 +1,58 @@
+@use 'abstract/typography' as t;
+@use 'abstract/colors' as c;
+@use 'components/card' as card;
+@use 'abstract/variables' as v;
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: t.$font-primary;
+  background-color: c.$color-primary;
+}
+
+.container {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  background-image: url(../images/bg-pattern-top.svg),
+    url(../images/bg-pattern-bottom.svg);
+
+  background-repeat: no-repeat, no-repeat;
+
+  /* 1 - The size of the spheres are set as a ration of the view port with. 
+The view port width is set by dividing the original size of the sphere (978px or 61.125rem) by the desktop 
+view port width. So 61.125rem / 1440px = 0.679166666666667.
+
+2 - To set the x and y axis based on the view port with I also used clamp to make the x and y a ratio
+of the viewport. Since I needed a negative number to off set the sphere of screen, I multiplied the values 
+by negative one. Viewport width was set based on the largest value. 
+*/
+
+  background-size: clamp(38.875rem, 68vw, 61.125rem),
+    clamp(38.875rem, 68vw, 61.125rem); // - 1
+
+  background-position: top calc(clamp(22.3125rem, 35vw, 31.8125rem) * -1) // - 2
+    right clamp(10.0625rem, 52vw, 46.5625rem),
+    top clamp(22.4375rem, 26vw, 23.3125rem) left
+      clamp(10.3125rem, 52vw, 43.1875rem);
+}
+
+.attribution {
+  margin-top: 5rem;
+}
