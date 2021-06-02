@@ -35,7 +35,7 @@ body {
 
   background-repeat: no-repeat, no-repeat;
 
-  /* 1 - The size of the spheres are set as a ration of the view port with. 
+  /* 1 - The size of the spheres are set as a ratio of the view port width. 
 The view port width is set by dividing the original size of the sphere (978px or 61.125rem) by the desktop 
 view port width. So 61.125rem / 1440px = 0.679166666666667.
 
@@ -48,9 +48,9 @@ by negative one. Viewport width was set based on the largest value.
     clamp(38.875rem, 68vw, 61.125rem); // - 1
 
   background-position: top calc(clamp(22.3125rem, 35vw, 31.8125rem) * -1) // - 2
-    right clamp(10.0625rem, 52vw, 46.5625rem),
-    top clamp(22.4375rem, 26vw, 23.3125rem) left
-      clamp(10.3125rem, 52vw, 43.1875rem);
+    left calc(clamp(287px, 52vw, 411px) * -1),
+    bottom calc(clamp(312px, 44vw, 633px) * -1) right
+      clamp(-231px, 52vw, -411px);
 }
 
 .attribution {
