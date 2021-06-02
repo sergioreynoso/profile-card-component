@@ -28,7 +28,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/used-backgroundimage-property-and-flexbox-Vv0H0ShTg)
 - Live Site URL: [Live Site](https://competent-fermi-e317c5.netlify.app/)
 
 ## My process
