@@ -24,7 +24,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 ### Screenshot
 
 ![Desktop](/images/screenshot_desktop.png)
-![Mobile](/images/screenshot_mobile.png)
+![Mobile](/images/screenshot_mobile.png=375x667)
 
 ### Links
 
